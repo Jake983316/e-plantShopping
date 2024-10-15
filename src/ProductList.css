@@ -92,6 +92,10 @@ body {
     margin-bottom: 10px;
 }
 
+.product-description {
+    font-style: italic;
+}
+
 .product-image {
     max-width: 100%;
     height: 200px; /* Adjust height for better consistency */
@@ -215,9 +219,15 @@ body {
     background-color: #45a049;
   }
   
-  .product-button.added-to-cart {
+  .product-button:disabled {
     background-color: grey; /* Grey when product is added */
+    cursor: not-allowed;
   }
+  
+  .product-button:disabled:hover {
+    background-color: grey
+  }
+
   @media (max-width: 1200px) {
     .product-card {
       flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */
